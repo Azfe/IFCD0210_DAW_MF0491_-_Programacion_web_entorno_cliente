@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera web</title>
+    <style>
+        table {
+            width: 30%;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Mi primer header</h1>
+    <h2>Mi segundo header</h2>
+    <h3>Mi tercer header</h3>
+    <h4>Mi cuarto header</h4>
+    <h5>Mi quinto header</h5>
+    <h6>Mi sexto header</h6>
+    <p>Canchito feliz está muy feliz.</p>
+    <p>Canchito triste está muy triste.</p>
+    <hr>
+    <h2>Canchito feliz.</h2>
+    <p>Un poco más de texto.</p>
+    <!-- Esto es un comentario -->
+    <p>Este es un texto <span>mucho más largo</span> que el anterior.</p>
+    <p>Este es un texto <span style="color: red;">mucho más largo</span> que el anterior.</p>
+    <p>Este es un texto <span style="color: red; font-weight: bold;">mucho más largo</span> que el anterior y es para
+        mostrar <br><br> la etiqueta anterior.</p>
+    <a target="_blank" href="https://www.youtube.com/watch?v=MJkdaVFHrto&list=PLSnadb41DsdKxcWm4wFElbfM6aUhwHjzL">Video
+        tutorial</a>
+    <img src="img/coffee.jpg" alt="Café" width="200" height="200">
+    <form action="/form" method="POST">
+        <h2>Formulario de contacto</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre aquí">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Escribe tu email aquí">
+        <br>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" cols="50" placeholder="Escribe tu mensaje aquí"></textarea>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+    <h2>Lista de cosas que hacer</h2>
+    <!-- Lista no ordenada -->
+    <ul>
+        <li>Hacer la compra</li>
+        <li>Limpiar la casa</li>
+        <li>Estudiar para el examen</li>
+    </ul>
+    <!-- Lista ordenada -->
+    <ol>
+        <li value="50">Hacer la compra</li>
+        <ol>
+            <li style="list-style: lower-alpha;">Limpiar la casa</li>
+        </ol>
+        <li>Estudiar para el examen</li>
+        <ol>
+            <li style="list-style: lower-alpha;">Hacer ejercicio</li>
+            <li style="list-style: lower-alpha;">Leer un libro</li>
+        </ol>
+    </ol>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Ciudad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alex</td>
+                <td>41</td>
+                <td>Barcelona</td>
+            </tr>
+            <tr>
+                <td>María</td>
+                <td>32</td>
+                <td>Madrid</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td>08620</td>
+            <td>21710</td>
+            <td>08013</td>
+        </tfoot>
+    </table>
+
+</body>
+
+</html>
