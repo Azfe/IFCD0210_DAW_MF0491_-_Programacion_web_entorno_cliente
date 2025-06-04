@@ -32,17 +32,33 @@
         main {
             padding: 20px;
         }
+        div {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
         article {
             background-color: white;
             padding: 15px;
             margin-bottom: 20px;
             border-radius: 10px;
         }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Bienvenido a mi blog</h1>
+        <h1 id="title">Bienvenido a mi blog</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -50,8 +66,12 @@
                 <li><a href="contact.html">Contacto</a></li>
             </ul>
         </nav>
-    </header>
+    </header>    
     <main>
+        <div>
+            <h2>Hola, mundo</h2>
+            <p>¡Este es mi primer blog! Aquí compartiré mis pensamientos, experiencias y mucho más. ¡Espero que lo disfrutes!</p>            
+        </div>
         <section>
             <h2>Últimos posts</h2>
             <p>Aquí encontrarás los últimos posts de mi blog. ¡Espero que los disfrutes!</p>
@@ -61,17 +81,21 @@
                 <h4>Este es el contenido de mi primer post en el blog. Aquí compartiré mis pensamientos y experiencias.</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas obcaecati quo magni. Eveniet, inventore maxime, provident odio tempore reiciendis non, neque accusantium rerum adipisci iusto officiis! Nam dicta ipsum modi?</p>
                 <img src="img/coffe_3.jpg" alt="Café" width="400">
+                <p><small>Pie de página de la imagen</small></p>
             </article>
             <article>
                 <h3>Segundo post</h3>
                 <h4>En este segundo post, hablaré sobre mis intereses y pasiones. ¡Espero que lo disfruten!</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas obcaecati quo magni. Eveniet, inventore maxime, provident odio tempore reiciendis non, neque accusantium rerum adipisci iusto officiis! Nam dicta ipsum modi?</p>
                 <img src="img/unsplash.jpg" alt="Café" width="400">
+                <p><small>Pie de página de la imagen</small></p>             
             </article>
         </section>
+        <a href="#title">Volver arriba</a><br>
     </main>
     <footer>
-
-    </footer>    
+        <a href="mailto:hola@email.com">hola@email.com</a>
+        <p><small>&copy; Copyright 2021</small></p>
+    </footer>
 </body>
 </html>
