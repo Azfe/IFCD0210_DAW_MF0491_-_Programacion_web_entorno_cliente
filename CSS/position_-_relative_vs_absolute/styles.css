@@ -1,0 +1,36 @@
+body {
+    font-family: sans-serif; 
+    margin: 0;
+    background-color: aquamarine;
+    color: rgb(102, 40, 218);
+}
+
+.box {
+    display: inline-block;
+    width: 100px;
+    height: 80px;
+    background-color: lightseagreen;
+    color: tomato;
+}
+
+#r-two {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    background-color: lightcoral;
+}
+
+#a-two {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: lightblue;
+}
+
+.section-absolute {
+    position: relative;
+}
+
+@media (max-width: 780px) {
+    
+}

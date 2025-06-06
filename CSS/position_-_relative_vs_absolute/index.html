@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position: relative vs absolute</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Position: relative vs absolute</h1>
+      <p>
+        This example demonstrates the difference between
+        <code>position: relative</code> and <code>position: absolute</code>. The
+        first box is positioned relative to its normal position, while the
+        second box is positioned absolutely within the section.
+      </p>
+      <p>
+        The boxes are styled with different background colors and sizes to
+        illustrate their positions.
+      </p>
+    </header>
+    <section>
+      <h2>Position: relative</h2>
+      <p>
+        Comportamiento: El elemento se posiciona relativo a su posición original
+        en el flujo normal del documento.
+      </p>
+      <h4>Características:</h4>
+      <p>
+        Mantiene su espacio original en el documento Los otros
+        elementos actúan como si siguiera en su lugar original Se puede mover
+        usando top, right, bottom, left.
+      </p>
+      <div class="box" id="r-one">Title 1</div>
+      <div class="box" id="r-two">Title 2 (Relative)</div>
+      <div class="box" id="r-three">Title 3</div>
+      <div class="box" id="r-four">Title 4</div>
+    </section>
+    <section class="section-absolute">
+      <h2>Position: absolute</h2>
+      <p>
+        Comportamiento: El elemento se posiciona relativo a su contenedor padre
+        posicionado más cercano (que tenga position: relative, absolute, fixed,
+        o sticky).
+      </p>
+      <h4>Características:</h4>
+      <p>
+        Se saca completamente del flujo normal del documento No ocupa espacio
+        (otros elementos se comportan como si no existiera) Si no hay contenedor
+        padre posicionado, se posiciona relativo al 'body'.
+      </p>
+      <div class="box" id="a-one">Title 1</div>
+      <div class="box" id="a-two">Title 2 (Absolute)</div>
+      <div class="box" id="a-three">Title 3</div>
+      <div class="box" id="a-four">Title 4</div>
+    </section>
+  </body>
+</html>
