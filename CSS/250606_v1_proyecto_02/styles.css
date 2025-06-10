@@ -19,7 +19,7 @@ body {
 }
 
 .container-images .image-container img {
-    width: 50px;
+    width: 100px;
     height: auto;
     display: block;
 }
@@ -44,7 +44,6 @@ body {
     white-space: nowrap;
     margin: o auto;
     width: 150px;
-
 }
 
 .container-images .image-container:hover .name {
