@@ -1,73 +1,142 @@
-body{
+body {
     font-family: sans-serif;
-background-color: aquamarine;
+    /* Establece la fuente*/
+    background-color: aquamarine;
+    /* Color de fondo */
 }
-.imagenes-container{
-   
+
+.imagenes-container {
+    /* clase del contenedor de imagenes */
     display: flex;
+    /* Activa el uso de flex al container */
     justify-content: center;
+    /* centra los elementos en horizontal */
     align-items: center;
+    /* centra los elementos en vertical */
     height: 100vh;
+    /* establece la altura de un elemento en el 100% de la altura visible del navegador.
+ */
 }
-.imagenes-container .imagen{
+
+.imagenes-container .imagen { /* Modifica la clase '.imagen' que pertenecen al contenedor '.images-container' */
     position: relative;
+    /* Posicionar un elemento de forma flexible dentro de su contenedor, pero manteniendo su posición original 
+    como referencia */
     margin-right: -20px;
+    /* Resta 20 pixeles de margen derecho */
     display: inline-flex;
+    /* Combina inline con flex. Inline no ocupa todo el ancho disponible y se ajusta al contenido. 
+    Ademas, propiedades de flexbox */
     flex-direction: column;
-   
+    /* - los elementos se colocan en una sola columna, de arriba hacia abajo. */
 }
-.imagenes-container .imagen img{
+
+.imagenes-container .imagen img { 
+    /* Establece el ancho de la imagen */
     width: 150px;
+    
+    /* Define la altura de la imagen */
     height: 150px;
+    
+    /* Aplica una transición suave en la transformación */
     transition: transform 0.32s ease-in-out;
 }
 
-.imagenes-container .imagen .nombre{
+.imagenes-container .imagen .nombre {
+    /* Pseudoclase nombre dentro de la pseudoclase imagen */
     position: absolute;
+    /* Posiciona el elemento de forma absoluta respecto a su contenedor padre posicionado */
     background-color: black;
+    /* Color de fondo */
     border-radius: 5px;
+    /* Esquinas redondeadas con radio de 5px */
     color: white;
+    /* Color de texto */
     display: none;
+    /* El elemento está oculto por defecto (probablemente se muestre con hover */
     min-width: 100px;
+    /* Ancho mínimo de 100px */
     width: 150px;
+    /* /* Ancho del contenedor de 100px */
     top: -70px;
-   
+    /* Se posiciona 70px por encima de su posición normal */
+
     padding: 10px 15px;
-   
-   
+    /* Espaciado interno: 10px arriba/abajo, 15px izquierda/derecha */
 }
-.imagenes-container .imagen .nombre .text{
-    display: inline-block;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    margin: 0 auto;
-    width:  150px;
-    text-align: center;
+
+.imagenes-container .imagen .nombre .text {
+    /* Permite aplicar dimensiones (bloque) manteniendo comportamiento inline */
+    display: inline-block;    
+    /* Añade "..." cuando el texto excede el ancho disponible */
+    text-overflow: ellipsis;    
+    /* Oculta el contenido que se desborda del contenedor */
+    overflow: hidden;    
+    /* Impide que el texto se divida en múltiples líneas */
+    white-space: nowrap;    
+    /* Centra el elemento horizontalmente (redundante con inline-block) */
+    margin: 0 auto;    
+    /* Ancho fijo del contenedor de texto */
+    width: 150px;    
+    /* Centra el texto dentro del elemento */
+    text-align: center;    
+    /* Incluye padding y border en el cálculo del ancho total */
     box-sizing: border-box;
 }
-.imagenes-container .imagen:hover .nombre{
+
+.imagenes-container .imagen:hover .nombre {
     display: inline-block;
+    /* Permite aplicar dimensiones manteniendo comportamiento inline */
     transform: translateY(-20px)
 }
-.imagenes-container .imagen .nombre::before {
+
+.imagenes-container .imagen .nombre::before { /* El pseudo-elemento ::before es una característica de CSS que 
+    permite insertar contenido antes del contenido real de un elemento */
+
+    /* Crea un pseudo-elemento vacío */
     content: "";
+    
+    /* Posicionamiento absoluto respecto al contenedor padre (.nombre) */
     position: absolute;
-    width:  1px;
+    
+    /* Dimensiones mínimas - el tamaño real lo definen los borders */
+    width: 1px;
     height: 1px;
+    
+    /* Posiciona la flecha al 40% desde la izquierda */
     left: 40%;
-    bottom: -20px;  
+    
+    /* Coloca la flecha 20px por debajo del tooltip */
+    bottom: -20px;
+    
+    /* === CREACIÓN DEL TRIÁNGULO CON BORDERS === */
+    /* Borde superior negro - forma la parte visible del triángulo */
     border-top: 10px solid black;
+    
+    /* Bordes laterales transparentes - crean los lados del triángulo */
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
+    
+    /* Borde inferior transparente - completa la forma triangular */
     border-bottom: 10px solid transparent;
 }
-.imagenes-container .imagen:hover img{
-transform: translateY(-20px);
+
+
+.imagenes-container .imagen:hover img {
+    /* Mueve la imagen 20px hacia arriba cuando se hace hover sobre el contenedor .imagen */
+    /* Esto crea un efecto de "elevación" o "flotación" de la imagen */
+    transform: translateY(-20px);
 }
-@media (max-width: 680px){
-    .imagenes-container{
+
+/* === RESPONSIVE DESIGN PARA DISPOSITIVOS MÓVILES === */
+@media (max-width: 680px) {
+    .imagenes-container {
+        /* Cambia la disposición de horizontal a vertical */
+        /* Las imágenes se apilarán una debajo de la otra */
         flex-direction: column;
+        
+        /* Establece altura a 180% del viewport para acomodar */
+        /* todas las imágenes apiladas verticalmente */
         height: 180vh;
     }
 }
