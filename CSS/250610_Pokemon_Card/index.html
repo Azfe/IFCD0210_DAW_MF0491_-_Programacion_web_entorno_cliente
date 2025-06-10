@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta Pokémon</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="search-container">
+            <input type="text" class="search-input" id="pokemonInput" placeholder="Busca un Pokémon por nombre o número...">
+            <button class="search-btn" onclick="searchPokemon()">Buscar</button>
+        </div>
+        
+        <div id="pokemonContainer">
+            <div class="loading">Busca un Pokémon para comenzar...</div>
+        </div>
+        
+        <div class="evolution-container" id="evolutionContainer" style="display: none;">
+            <button class="evolution-arrow" id="prevEvolution" onclick="previousEvolution()">‹</button>
+            <div class="evolution-info">
+                <div class="evolution-stage" id="evolutionStage"></div>
+                <div class="evolution-chain" id="evolutionChain"></div>
+            </div>
+            <button class="evolution-arrow" id="nextEvolution" onclick="nextEvolution()">›</button>
+        </div>
+        
+        <button class="random-btn" onclick="getRandomPokemon()">Pokémon Aleatorio</button>
+    </div>
+
+    <script src="js/pokemon-card.js"></script>
+</body>
+</html>
