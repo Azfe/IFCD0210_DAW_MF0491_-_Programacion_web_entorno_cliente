@@ -1,0 +1,16 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Barra de navegación */
+.navbar {
+    padding: 2 rem;
+    background-color: #f5f6f7;        
+}
+
+.navbar-collapse {    
+    justify-content: space-between;
+    align-items: center;
+}
