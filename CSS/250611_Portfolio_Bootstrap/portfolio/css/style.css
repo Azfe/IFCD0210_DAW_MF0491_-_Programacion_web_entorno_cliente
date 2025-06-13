@@ -1,9 +1,3 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-}
-
 /* Barra de navegación */
 .navbar {
     padding: 2 rem;
@@ -11,6 +5,148 @@ html, body {
 }
 
 .navbar-collapse {    
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+}
+
+/* Estilos generales */
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-family: "Rowdies", sans-serif;  
+}
+
+.seccion-oscura {
+    background-color: #1b1b32;
+    color: #f5f6f7;
+}
+
+.seccion-clara {
+    background-color: #f5f6f7;
+    color: #1b1b32;
+}
+
+.seccion-titulo {
+    font-size: 2rem;
+    padding: 15px 0;
+    font-family: "Rowdies", sans-serif;    
+}
+
+.seccion-texto {
+    font-size: 1.1rem;    
+}
+
+/* Hero Section */
+
+.hero {
+    background-color: #f5f6f7;
+    min-height: 450px;
+    text-align: center;    
+}
+
+.hero-principal {
+    padding: 3rem;
+}
+
+.hero-imagen-desarrollador {
+    width: 200px;
+    height: 200px;
+    margin: 20px;    
+    object-fit: cover;    
+}
+
+.hero-principal h2 {
+    font-size: 1.5rem;
+    color: #615151;
+    font-family: "Rowdies", sans-serif;
+}
+
+/* Sobre mi */
+
+.sobre-mi {
+    height: 500px;
+    padding: 10px;
+}
+
+.sobre-mi .contenedor {
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Experiencia */
+.experiencia {
+    padding: 40px 40px 60px 40px;
+}
+
+.experiencia .columna {
+    padding: 20px;
+    border: 2px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 0.2s ease-in; /* Aplica transición suave */
+}
+
+.experiencia .columna:hover {
+    color: #f5f6f7;
+    background-color: #1b1b32;
+    transform: scale(1.02); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+.experiencia .columna:hover i {
+  color: #1b1b32; /* Cambia el color del icono */
+  background-color: #f5f6f7; /* Invierte los colores del icono */
+  transition: all 0.2s ease-in;
+  transform: scale(1.02);
+}
+
+.experiencia i {
+    font-size: 30px;
+    color: #f5f6f7;
+    background-color: #1b1b32;
+    padding: 8px 19px;
+    border-radius: 50%;
+}
+
+.experiencia-titulo {
+    font-size: 25px;
+    font-weight: bold;  
+    margin: 10px 0;  
+    /* font-family: "Rowdies", sans-serif;     */
+}
+
+.badges-contenedor {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;    
+}
+
+.badges {
+    margin: 5px;
+}
+
+
+/* Adaptable (Responsive) */
+
+@media screen and (max-width: 768px) {
+    .navbar-brand {
+        display: none;
+    }
+    
+}
+
+@media screen and (min-width: 700px) {
+    .hero-inferior-imagen {
+        max-width: 600px;
+    }    
 }
