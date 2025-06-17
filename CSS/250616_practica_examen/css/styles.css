@@ -25,16 +25,13 @@ header h1 {
     font-family: "Zain", sans-serif;
     font-weight: 800;
     font-style: normal;
-    /* font-family: "Lilita One", sans-serif;
-    font-weight: 400;
-    font-style: normal; */
     font-size: 4rem;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     position: relative;
     z-index: 1;
     margin: 0;
-    letter-spacing: -1px;  
+    letter-spacing: -1px;
 }
 
 /* Main content */
@@ -103,7 +100,12 @@ article strong {
     font-weight: 700;
 }
 
-/* Aside */
+.img-article {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Barra lateral */
 aside {
     background: white;
     padding: 30px;
@@ -174,6 +176,55 @@ aside li a:hover {
 
 aside li a:hover::before {
     left: 100%;
+}
+
+.container-btn-back {
+    display: block;
+    margin-left: auto;
+    margin-bottom: 100px;
+}
+
+.btn-back {
+    font-family: "Zain", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: #333;
+    padding: 15px 25px;
+    width: 200px;
+    border-radius: 15px;    
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    cursor: pointer;
+    position: relative;
+    padding-left: 40px;
+    transition: background-color 0.3s;  
+    transition: all 0.3s ease;  
+    text-decoration: none;    
+}
+
+.btn-back:before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    margin-left: 10px;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 10px solid #333;
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+    color: #4ecdc4;
+    transform: scale(1.2); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 5px 15px rgba(78, 205, 196, 0.2);       
+} 
+
+.btn-back:hover:before {
+    border-right: 10px solid #4ecdc4; /* Cambia a azul en hover */
 }
 
 /* Footer */
@@ -255,7 +306,7 @@ footer p {
 
     footer {
         /* margin: 30px -15px -15px -15px; */
-        /* padding: 25px 15px; */
+        padding: 25px 100px;
     }
 }
 
