@@ -25,29 +25,30 @@ Algoritmo Calculadora_Simple
 	Escribir "M. Multiplicar"
 	Escribir "D. Dividir"
 	Escribir "Introduce el caracter correspondiente al operador aritmético: "
-	Leer operacion	
+	Leer operacion
 	
-	// Se calcula el resultado	
+	// Se calcula el resultado
 	Segun operacion Hacer
-		"S":
+		Caso "S":
 			resultado = num1 + num2
 			Escribir "Resultado suma: ", num1, " + ", num2, " = ", resultado
-		"R":
+		Caso "R":
 			resultado = num1 + num2
 			Escribir "Resultado resta: ", num1, " - ", num2, " = ", resultado
-		"M":
+		Caso "M":
 			resultado = num1 * num2
 			Escribir "Resultado multiplicación: ", num1, " * ", num2, " = ", resultado
-		"D":
+		Caso "D":
 			Si num2 <> 0 Entonces
 				resultado = num1 / num2
 				Escribir "Resultado división: ", num1, " / ", num2, " = ", resultado
 			SiNo
-				Escribir "No se puede dividir entre 0"
+				Escribir "No se puede dividir entre 0."
 			FinSi
 			
 		De Otro Modo:
-			Escribir "Error. Elige una opción válida"
+			// En el caso de introducir un caracter no válido, se muestra un error.
+			Escribir "¡Error! Elige una opción válida."
 	FinSegun
 	
 FinAlgoritmo

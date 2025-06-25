@@ -17,10 +17,13 @@ Algoritmo Contador_pares_impares
 	Escribir "Introduce la cantidad de números a introducir: "
 	Leer cantidadNumeros
 	
+	
 	Para i = 1 Hasta cantidadNumeros Con Paso 1 Hacer
+		// Solicitud de número
 		Escribir "Introduce un número: "
 		Leer num
 		
+		// Se calcula si el número es par o impar	
 		Si (num MOD 2 = 0) Entonces
 			Escribir num, " es un número par"
 			contadorPares = contadorPares + 1
@@ -31,7 +34,8 @@ Algoritmo Contador_pares_impares
 		
 	FinPara	
 	
-	Escribir "Cantidad de números pares:", contadorPares
-	Escribir "Cantidad de números impares:", contadorImpares
+	// Informar al usuario el resultado
+	Escribir "Cantidad de números pares: ", contadorPares
+	Escribir "Cantidad de números impares: ", contadorImpares
 		
 FinAlgoritmo

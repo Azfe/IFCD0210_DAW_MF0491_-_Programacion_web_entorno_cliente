@@ -11,19 +11,20 @@ Algoritmo Factorial_numero
 	// Declaración de variables
 	Definir num, factorial, i Como Entero
 	factorial = 1
-	
-	// Solicitud de datos al usuario
-	Escribir "Introduce un número: "
-	Leer num	
 		
 	Repetir
+		// Solicitud de datos al usuario
+		Escribir "Introduce un número para conocer su factorial !n: "
+		Leer num	
+		
 		// Se valida que el número introducido no sea negativo
 		Si (num < 0) Entonces
 			Escribir "Error. El número es negativo."
 		FinSi
 		
+		// Se calcula el factorial
 		Si (num = 0) Entonces
-			Escribir "El factorial es: ", fatorial
+			Escribir "Si es 0, el factorial se establece en 1."  
 			
 		SiNo
 			Para i = 1 Hasta num Con Paso 1 Hacer				
@@ -32,6 +33,7 @@ Algoritmo Factorial_numero
 		FinSi			
 	Hasta Que num >= 0	
 	
+	// Se muestra el resultado al usuario
 	Escribir "El factorial de ", num, " es: ", factorial 
 	
 FinAlgoritmo
