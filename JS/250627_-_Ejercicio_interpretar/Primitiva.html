@@ -1,48 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Generador de La Primitiva JMFF</title>
-    <!-- Enlazar al fichero externo de estilos css -->
-    <link rel="stylesheet" href="css/styles.css" />    
-  </head>
-  <body>
-    <div class="container">
-      <h1>Generador de La Primitiva</h1>
-      <div class="buttons-container">
-        <button id="generateButton">Generar Combinación</button>
-        <button id="exitButton">Salir</button>
-      </div>
-      <div class="result-box" id="resultBox">
-        <p>
-          Haz clic en "Generar Combinación" para obtener tus números de la
-          suerte.
-        </p>
-      </div>
 
-      <div class="explanation">
-        <h3>¿Cómo funciona este generador?</h3>
-        <p>
-          Este generador crea combinaciones aleatorias para la Lotería Primitiva
-          española, siguiendo sus reglas:
-        </p>
-        <ul>
-          <li>
-            Se generan **6 números principales** entre el 1 y el 49, sin
-            repetir.
-          </li>
-          <li>
-            Se genera un **número Complementario** entre el 1 y el 49, diferente
-            a los 6 números principales.
-          </li>
-          <li>Se genera un **número Reintegro** entre el 0 y el 9.</li>
-        </ul>
-        <p>¡Usa este generador para tus sorteos y mucha suerte!</p>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generador de La Primitiva JMFF</title>
+  <!-- Enlazar al fichero externo de estilos css -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Generador de La Primitiva</h1>
+    <div class="buttons-container">
+      <button id="generateButton">Generar Combinación</button>
+      <button id="exitButton">Salir</button>
+    </div>
+    <div class="result-box" id="resultBox">
+      <p>
+        Haz clic en "Generar Combinación" para obtener tus números de la
+        suerte.
+      </p>
     </div>
 
-    <!-- Enlazar al fichero externo de js -->
-    <script src="js/app.js"></script>
-  </body>
+    <div class="explanation">
+      <h3>¿Cómo funciona este generador?</h3>
+      <p>
+        Este generador crea combinaciones aleatorias para la Lotería Primitiva
+        española, siguiendo sus reglas:
+      </p>
+      <ul>
+        <li>
+          Se generan **6 números principales** entre el 1 y el 49, sin
+          repetir.
+        </li>
+        <li>
+          Se genera un **número Complementario** entre el 1 y el 49, diferente
+          a los 6 números principales.
+        </li>
+        <li>Se genera un **número Reintegro** entre el 0 y el 9.</li>
+      </ul>
+      <p>¡Usa este generador para tus sorteos y mucha suerte!</p>
+    </div>
+  </div>
+
+  <!-- Enlazar al fichero externo de js -->
+  <script src="js/app.js"></script>
+</body>
+
 </html>
