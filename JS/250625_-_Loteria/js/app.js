@@ -1,5 +1,5 @@
 // Autor: Alejandro Zapata
-// Fecha: 25/06/2025
+// Fecha: 26/06/2025
 // Descripción: Este programa simula un sorteo de lotería generando 6 números
 
 function resultadoLoteria() {
@@ -37,6 +37,9 @@ function resultadoLoteria() {
                 for (i = 0; i < numerosGanadores.length; i++) {
                     console.log(numerosGanadores[i]); // Imprime los números ganadores en la consola
                 }
+
+                numerosGanadores.length = 0; // Reinicia la lista de números ganadores para el próximo sorteo
+
                 console.log("====================================");
                 console.log("¡Gracias por participar!");
                 break;
@@ -51,42 +54,7 @@ function resultadoLoteria() {
         }
 
     } while (opcion !== 2);
-
-
 }
 
-resultadoLoteria(); // Llama a la función para ejecutar el sorteo
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function resultadoLoteria() {
-//     const numeros = [];
-//     const numerosSorteados = [];
-//     let numero;
-
-//     // Gera 6 números aleatórios únicos entre 1 e 49
-//     while (numeros.length < 6) {
-//         numero = Math.floor(Math.random() * 49) + 1;
-//         if (!numeros.includes(numero)) {
-//             numeros.push(numero);
-//         }
-//     }
-
-//     // Ordena os números sorteados
-//     numeros.sort((a, b) => a - b);
-
-//     // Exibe os números sorteados
-//     document.getElementById("resultado").innerHTML = "Números sorteados: " + numeros.join(", ");
-// }
+// Invocar la función para iniciar el sorteo
+resultadoLoteria();
