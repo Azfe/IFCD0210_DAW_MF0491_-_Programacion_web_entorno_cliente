@@ -1,7 +1,7 @@
 function convertirTiempo() {
     // Obtener valores de los inputs
-    let horas = parseInt(document.getElementById('horas').value) || 0;
-    let minutos = parseInt(document.getElementById('minutos').value) || 0;
+    const horas = parseInt(document.getElementById('horas').value) || 0;
+    const minutos = parseInt(document.getElementById('minutos').value) || 0;
 
     // Validar que los valores sean válidos
     if (horas < 0 || minutos < 0 || minutos > 59) {
