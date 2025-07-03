@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor de Tiempo a Segundos</title>
+    <!-- CSS -->
+    <link href="ejercicio6.css" rel="stylesheet" type="text/css" />
+    <!-- Autor: Alejandro Zapata -->
+</head>
+
+<body>
+    <div class="container">
+        <h1>Convertidor de Tiempo a Segundos</h1>
+
+        <div class="input-group">
+            <label for="horas">Horas:</label>
+            <input type="number" id="horas" min="0" value="0" placeholder="Introduce las horas">
+        </div>
+
+        <div class="input-group">
+            <label for="minutos">Minutos:</label>
+            <input type="number" id="minutos" min="0" max="59" value="0" placeholder="Introduce los minutos">
+        </div>
+
+        <button onclick="convertirTiempo()">Convertir a Segundos</button>
+
+        <div id="resultado" class="result"></div>
+    </div>
+
+    <script src="ejercicio6.js"></script>
+</body>
+
+</html>
