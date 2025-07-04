@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tareas</title>
+    <!-- CSS -->
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <!-- Autor: Alejandro Zapata -->
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="todolist">
+            <h1>📝 Lista de tareas</h1>
+        </div>
+
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="Inserta una nueva tarea">
+            <button id="addTaskBtn">Añadir</button>
+        </div>
+
+        <div id="infoMessage" class="infoMessage">
+            <!-- Aparece el mensaje de verificación -->
+        </div>
+
+        <ul id="taskList">
+            <!-- Las tareas se agregarán aquí dinámicamente -->
+        </ul>        
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

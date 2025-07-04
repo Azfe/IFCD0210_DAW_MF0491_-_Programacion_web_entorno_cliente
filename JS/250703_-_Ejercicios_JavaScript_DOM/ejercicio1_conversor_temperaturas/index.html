@@ -4,29 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convertidor de Tiempo a Segundos</title>
+    <title>Conversor de Temperaturas</title>
     <!-- CSS -->
     <link href="styles.css" rel="stylesheet" type="text/css" />
     <!-- Autor: Alejandro Zapata -->
+    <style>
+
+    </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>Convertidor de Tiempo a Segundos</h1>
+        <div class="thermometer">🌡️</div>
+        <h1>Conversor de Temperaturas</h1>
 
         <div class="input-group">
-            <label for="horas">Horas:</label>
-            <input type="number" id="horas" min="0" value="0" placeholder="Introduce las horas">
+            <label for="conversionType">Tipo de conversión:</label>
+            <select id="conversionType">
+                <option value="1">Celsius a Fahrenheit</option>
+                <option value="2">Fahrenheit a Celsius</option>
+            </select>
         </div>
 
         <div class="input-group">
-            <label for="minutos">Minutos:</label>
-            <input type="number" id="minutos" min="0" max="59" value="0" placeholder="Introduce los minutos">
+            <label for="temperature">Temperatura:</label>
+            <input type="number" id="temperature" placeholder="Ingresa la temperatura" step="0.1">
         </div>
 
-        <button onclick="convertirTiempo()">Convertir a Segundos</button>
+        <button onclick="convertTemperature()">Convertir</button>
+        <button onclick="clearFields()">Limpiar</button>
 
-        <div id="resultado" class="result"></div>
+        <div id="result" class="result">
+            Selecciona el tipo de conversión e ingresa una temperatura
+        </div>
     </div>
 
     <script src="app.js"></script>
