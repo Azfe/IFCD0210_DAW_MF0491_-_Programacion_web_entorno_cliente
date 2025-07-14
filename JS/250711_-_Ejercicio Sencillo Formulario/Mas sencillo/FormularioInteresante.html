@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Título -->
+  <title>Control de Artículo - Sin JS DOM</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/logo.PNG" />
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&family=Germania+One&family=Ojuju:wght@200..800&family=Sigmar+One&display=swap"
+    rel="stylesheet">
+
+  <!-- GOOGLE ICONS -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_double_arrow_up" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="title">Datos del Artículo (Validación en Servidor/Navegador)</h1>
+    <form action="#" method="POST" id="form-container">
+      <div class="form-group">
+        <!-- <label for="nombre">Nombre del Artículo:</label> -->
+        <input class="input-text" type="text" id="nombre" name="nombre" placeholder="Nombre" required minlength="3" />
+      </div>
+      <div class="form-group">
+        <!-- <label for="descripcion">Descripción:</label> -->
+        <textarea class="input-text" id="descripcion" name="descripcion" placeholder="Descripción" rows="4" required
+          minlength="10"></textarea>
+      </div>
+      <div class="form-group">
+        <!-- <label for="precio">Precio:</label> -->
+        <input class="input-text" type="number" id="precio" name="precio" placeholder="Precio" step="0.01" min="0.01"
+          required />
+      </div>
+      <div class="form-group">
+        <!-- <label for="cantidad">Cantidad:</label> -->
+        <input class="input-text" type="number" id="cantidad" name="cantidad" placeholder="Cantidad" min="1" required />
+      </div>
+      <div class="form-group">
+        <!-- <label for="categoria">Categoría:</label> -->
+        <select id="categoria" name="categoria" required>
+          <option value="">Selecciona una categoría</option>
+          <option value="electronica">Electrónica</option>
+          <option value="hogar">Hogar</option>
+          <option value="moda">Moda</option>
+          <option value="alimentos">Alimentos</option>
+          <option value="otros">Otros</option>
+        </select>
+      </div>
+      <!-- Nuevo desplegable -->
+      <div class="custom-select-wrapper">
+        <div class="custom-select-trigger">Selecciona una categoría</div>
+        <div class="custom-options">
+          <span class="custom-option" data-value="electronica">Electrónica</span>
+          <span class="custom-option" data-value="hogar">Hogar</span>
+          <span class="custom-option" data-value="moda">Moda</span>
+          <span class="custom-option" data-value="alimentos">Alimentos</span>
+          <span class="custom-option" data-value="otros">Otros</span>
+        </div>
+        <input type="hidden" name="categoria" id="categoria" required>
+      </div>
+      <!-- Botón -->
+      <button class="btn-form" type="submit">Guardar Artículo</button>
+    </form>
+  </div>
+</body>
+
+<script src="form.js"></script>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Control de Artículo</title>
+    <link rel="stylesheet" href="ForArti.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Datos del Artículo</h1>
+      <form id="articuloForm">
+        <div class="form-group">
+          <label for="nombre">Nombre del Artículo:</label>
+          <input type="text" id="nombre" name="nombre" required />
+        </div>
+        <div class="form-group">
+          <label for="descripcion">Descripción:</label>
+          <textarea
+            id="descripcion"
+            name="descripcion"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="precio">Precio:</label>
+          <input
+            type="number"
+            id="precio"
+            name="precio"
+            step="0.01"
+            min="0"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="cantidad">Cantidad:</label>
+          <input type="number" id="cantidad" name="cantidad" min="1" required />
+        </div>
+        <div class="form-group">
+          <label for="categoria">Categoría:</label>
+          <select id="categoria" name="categoria" required>
+            <option value="">Selecciona una categoría</option>
+            <option value="electronica">Electrónica</option>
+            <option value="hogar">Hogar</option>
+            <option value="moda">Moda</option>
+            <option value="alimentos">Alimentos</option>
+            <option value="otros">Otros</option>
+          </select>
+        </div>
+        <button type="submit">Guardar Artículo</button>
+      </form>
+      <div id="mensaje" class="mensaje"></div>
+    </div>
+    <script src="ForArty.js"></script>
+  </body>
+</html>
