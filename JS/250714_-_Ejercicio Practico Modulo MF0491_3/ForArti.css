@@ -76,6 +76,11 @@ button[type="submit"]:hover {
   display: none; /* Oculto por defecto, JavaScript lo mostrará */
 }
 
+.mensaje.exito,
+.mensaje.error {
+  display: block; /* Asegura que se muestre cuando tenga estas clases */
+}
+
 .mensaje.exito {
   background-color: #d4edda;
   color: #155724;

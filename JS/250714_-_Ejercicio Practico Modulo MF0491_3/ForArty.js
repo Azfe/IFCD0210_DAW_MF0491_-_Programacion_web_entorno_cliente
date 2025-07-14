@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const articuloForm = document.getElementById("articuloForm");
+  const articuloForm = document.getElementById("articuloForm");  
   const mensajeDiv = document.getElementById("mensaje");
 
   articuloForm.addEventListener("submit", (event) => {
