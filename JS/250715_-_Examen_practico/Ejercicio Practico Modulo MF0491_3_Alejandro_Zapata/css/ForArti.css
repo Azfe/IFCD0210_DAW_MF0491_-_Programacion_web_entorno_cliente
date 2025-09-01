@@ -1,0 +1,162 @@
+/* Autor: Alejandro Zapata Ferreira */
+
+:root {
+    --primario: #EB9D3D;
+    --secundario: #1A394A;
+    --terciario: #7DB6BC;
+    --exito-color: #155724;
+    --error-color: #721c24;
+    --texto-titulo: #333;
+    --texto: #555;
+    --blanco: #FFF;
+    --background-color: #f5f5f5;
+    --gradient-bg: linear-gradient(#1A394A, #7DB6BC);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, var(--background-color), var(--terciario));
+    margin: 0;
+    padding: 20px;
+    
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    background-color: var(--blanco);    
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 40vw;
+    width: 100%;
+    min-height: 80vh;    
+    border: 2px dashed var(--terciario);
+}
+
+.header-form {
+    background: linear-gradient(135deg, var(--primario), var(--background-color), var(--primario));
+    
+    padding: 40px 40px 20px 40px;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-family: "Gantari", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    font-size: 2.5em;
+    color: var(--secundario);
+    margin-bottom: 30px;
+}
+
+.form-container {
+    padding: 20px 40px;
+    padding-bottom: 40px;
+    border-radius: 15px;
+}
+
+.material-symbols-outlined {
+
+    font-size: 2.5rem;
+    margin-right: 20px;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-family: "Gantari", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    display: block;
+    margin-bottom: 5px;
+    color: var(--texto);
+    font-weight: bold;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 15px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    /* border-color: #007bff; */
+    border: 2px solid var(--primario);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+button[type="submit"] {
+    background: linear-gradient(135deg, var(--primario), var(--background-color), var(--primario));
+    color: var(--secundario);
+    width: 100%;
+    margin-top: 15px;
+    padding: 20px 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {    
+    border: 2px solid var(--primario);
+    color: var(--primario);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+    background-color: #1A394A;
+}
+
+.mensaje {
+    display: none;
+    margin-top: 20px;
+    padding:20px 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.mensaje.exito {
+    background-color: #d4edda;
+    color: var(--exito-color);
+    border: 1px solid #c3e6cb;
+}
+
+.mensaje.error {
+    background-color: #f8d7da;
+    color: var(--error-color);
+    border: 1px solid #f5c6cb;
+    text-align: left;
+    padding-left: 40px;
+}
